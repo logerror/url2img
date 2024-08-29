@@ -67,6 +67,6 @@ To run this program, you will need:
 Run the compiled binary with:
 
 ```bash
-./screenshot_with_qrcode
+./url2img <Url> <Image Path: eg: screenshot_with_qrcode.png>
 ```
 The program will capture a screenshot of the specified URL, generate a QR code, overlay the QR code and the URL text on the screenshot, and save the final image as screenshot_with_qrcode.png.

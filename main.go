@@ -8,6 +8,7 @@ import (
 	"image"
 	"image/draw"
 	"image/png"
+	"log"
 	"os"
 	"time"
 
@@ -20,9 +21,12 @@ import (
 )
 
 func main() {
+	if len(os.Args) < 3 {
+		log.Fatalf("Usage: %s <Url> <Image Path: eg: screenshot_with_qrcode.png>", os.Args[0])
+	}
 	// 定义URL和输出文件名
-	url := "https://sspai.com/post/58014"
-	outputFile := "screenshot_with_qrcode.png"
+	url := os.Args[1]
+	outputFile := os.Args[2]
 
 	// 创建一个无头Chrome浏览器的上下文
 	ctx, cancel := chromedp.NewContext(context.Background())
