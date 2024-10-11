@@ -55,12 +55,12 @@ To run this program, you will need:
 4. Clone the repository:
 
 ```bash
-  git clone https://github.com/your-username/screenshot-with-qrcode.git
-  cd screenshot-with-qrcode
+  git clone https://github.com/logerror/url2img.git
+  cd url2img
   ```
 5. Build the program:
 ```bash
-  go build -o screenshot_with_qrcode main.go
+  go build -o url2img main.go
   ```
 
 ## Usage
@@ -68,5 +68,7 @@ Run the compiled binary with:
 
 ```bash
 ./url2img <Url> <Image Path: eg: screenshot_with_qrcode.png>
+
+example:  ./url2img https://logerror.github.io screenshot_with_qrcode.png
 ```
 The program will capture a screenshot of the specified URL, generate a QR code, overlay the QR code and the URL text on the screenshot, and save the final image as screenshot_with_qrcode.png.
